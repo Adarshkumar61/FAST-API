@@ -1,14 +1,14 @@
-# from fastapi import FastAPI
+from fastapi import FastAPI
 
-# app = FastAPI()
+app = FastAPI()
 
-# @app.get("/")
-# def home():
-#     return {
-#     "status": "success",
-#     "user": "adarsh",
-#     "id": 10
-# }
+@app.get("/")
+def home():
+    return {
+    "status": "success",
+    "user": "adarsh",
+    "id": 10
+}
 
 #     # 
     # return {"message": "File created in static folder"}
