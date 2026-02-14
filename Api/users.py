@@ -66,3 +66,12 @@ def updated_user(user_id: int, user : User):
         return {"msg": "updated successfully","data": db}
     return {"msg": "user not found"}
         
+@app.delete("/delete_user/{user_id}")
+
+def delete_user(user_id : int):
+    if user_id in db:
+        del db[user_id]
+        return {
+            "msg": "user deleted successfully",
+            "data": db}
+    return {"msg": "user not found"}
