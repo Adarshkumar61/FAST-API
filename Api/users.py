@@ -63,10 +63,6 @@ def create_user(user_id: int, user : User):
 def updated_user(user_id: int, user : User):
     if user_id in db:
         db[user_id] = user
-        return {
-            "msg": "updated successfully",
-            "data": db}
-    return {
-        "msg": "user not found"
-    }
+        return {"msg": "updated successfully","data": db}
+    return {"msg": "user not found"}
         
